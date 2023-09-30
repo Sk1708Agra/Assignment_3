@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            long n=sc.nextLong();
+            long k=sc.nextLong();
+            long left=1;
+            long right=n;
+            long result=1;
+            while(left<=right){
+                long mid=left+(right-left)/2;
+                long power=(long)(Math.pow(mid,k));
+                if(power<=n)
+                {
+                    result=mid;
+                    left=mid+1;
+                }
+                else
+                {
+                    right=mid-1;
+                }
+            } 
+            System.out.println(result);
+        }
+    }
+}
