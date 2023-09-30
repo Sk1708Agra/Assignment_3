@@ -1,0 +1,28 @@
+import java.util.*;
+public class Main {
+  public static void main(String args[]){
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int m=sc.nextInt();
+      for(int i=n; i<m; i++)
+      {
+          arms(i);
+      }
+    }
+      public static void arms(int i)
+       {
+          int ans=0;
+          int cop=i;
+          while(i!=0)
+          {
+              int rem=i%10;
+              ans=(int)(ans+(Math.pow(rem,3)));
+              i=i/10;
+          }
+          if(cop==ans)
+          {
+              System.out.println(cop);
+          }
+     
+    }
+}
